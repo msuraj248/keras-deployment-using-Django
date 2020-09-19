@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h2><strong>Server is working absolutly fine</strong> </h2>
+    <form action="prediction", enctype="multipart/form-data", method="POST">
+        {% csrf_token %}
+        <p>Your Image name: <strong>{{file}}</strong> </p>
+        <h3>Your Image</h3><br>
+        <img src="{{filedisplay}}" alt="image"><h4>The Predicted Image is: {{predictedlable}}</h4><hr>
+        <label for="image">Upload img here:</label> <br><br>
+        <input type="file" name="image">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
